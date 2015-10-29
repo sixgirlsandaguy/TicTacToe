@@ -26,6 +26,17 @@ public class Board {
 			}
 		}
 	}
+		public void printBoard() 
+	{
+		for (int i = 0; i < Board.dim; i++)
+		{
+			for (int j = 0; j < Board.dim; j++)
+			{
+				System.out.print(board[i][j] + " ");
+			}
+			System.out.println();
+		}
+	}
 
 }
 
