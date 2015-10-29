@@ -26,7 +26,7 @@ public class Board {
 			}
 		}
 	}
-		public void printBoard() 
+	public void printBoard() 
 	{
 		for (int i = 0; i < Board.dim; i++)
 		{
@@ -36,6 +36,22 @@ public class Board {
 			}
 			System.out.println();
 		}
+	}
+	
+	public char getCell(int N)
+	{
+		int row = N/3;
+		if(N%3 == 0){
+			row --;
+		}
+		int col = N % 3;
+		if(col == 0){
+			col = 3;
+		}
+		col--;
+		
+		
+		return board[row][col];
 	}
 
 }

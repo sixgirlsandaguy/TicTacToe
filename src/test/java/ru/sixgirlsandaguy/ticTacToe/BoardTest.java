@@ -12,4 +12,10 @@ public class BoardTest {
       org.junit.runner.JUnitCore.main("ru.sixgirlsandaguy.ticTacToe");
     }
 
+	@Test
+	public void testGetCell() 
+	{
+		Board b = new Board();
+		assertEquals('1', b.getCell(1));
+	}
 }
