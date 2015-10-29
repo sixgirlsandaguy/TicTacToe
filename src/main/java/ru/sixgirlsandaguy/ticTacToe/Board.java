@@ -67,6 +67,22 @@ public class Board {
 		
 		return false;
 	}
+
+	public boolean isFull()
+	{
+		for (int i = 0; i < dim; i++)
+		{
+			for (int j = 0; j < dim; j++)
+			{
+				if (board[i][j] != 'X' && board[i][j] != 'O')
+				{
+					return false;
+				}
+			}
+		}
+		
+		return true;
+	}
 	
 
 	public void printBoard() 
