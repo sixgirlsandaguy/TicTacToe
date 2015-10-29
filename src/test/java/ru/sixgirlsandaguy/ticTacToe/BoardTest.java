@@ -34,4 +34,32 @@ public class BoardTest {
 		b.setCell('O', 6);
 		assertEquals('O', b.getCell(6));
 	}
+
+	@Test
+	public void testisNotOccupied() 
+	{
+		Board b = new Board();
+
+		boolean occupied = false;
+
+		assertEquals(occupied, b.isOccupied(4));
+	}
+
+	@Test
+	public void testisOccupied() 
+	{
+		Board b = new Board();
+
+		b.setCell('X', 5);
+
+		boolean occupied = true;
+
+		assertEquals(occupied, b.isOccupied(5));
+	}
+
+
 }
+
+
+
+

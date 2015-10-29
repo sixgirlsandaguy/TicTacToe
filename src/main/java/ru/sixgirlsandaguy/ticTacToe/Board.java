@@ -54,9 +54,21 @@ public class Board {
 		res[1] = col;
 		
 		return res;
-		
 	}
 	
+	public boolean isOccupied(int N)
+	{
+		int [] pos = cell_help(N);
+		
+		if (board[pos[0]][pos[1]] == 'X' || board[pos[0]][pos[1]] == 'O')
+		{
+			return true;
+		}
+		
+		return false;
+	}
+	
+
 	public void printBoard() 
 	{
 		for (int i = 0; i < Board.dim; i++)
