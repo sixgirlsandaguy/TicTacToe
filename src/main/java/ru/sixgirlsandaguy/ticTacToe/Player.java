@@ -13,4 +13,16 @@ public class Player
 	{
 		token = c;
 	}
+
+	//set player token as c
+	public void setPlayer(char c)
+	{
+		this.token = c;
+	}
+
+	//returns the players token
+	public char getPlayer()
+	{
+		return this.token;
+	}
 }
