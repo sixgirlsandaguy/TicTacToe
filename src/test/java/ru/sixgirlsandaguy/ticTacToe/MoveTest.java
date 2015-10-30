@@ -18,4 +18,39 @@ public class MoveTest
 		Move m = new Move();
 		assertEquals('b' , m.stringToChar("b"));
 	}
+
+		@Test
+	public void isValidString() 
+	{
+		Move m = new Move();
+		assertEquals(false, m.isValid("Hannes"));
+	}
+
+	@Test
+	public void isValidChar() 
+	{
+		Move m = new Move();
+		assertEquals(false, m.isValid("d"));
+	}
+
+	@Test
+	public void isValidMinus() 
+	{
+		Move m = new Move();
+		assertEquals(false, m.isValid("-12"));
+	}
+
+	@Test
+	public void isValidTrue() 
+	{
+		Move m = new Move();
+		assertEquals(true, m.isValid("1"));
+	}
+
+	@Test
+	public void isValidBiggerThanNine() 
+	{
+		Move m = new Move();
+		assertEquals(false, m.isValid("10"));
+	}
 }

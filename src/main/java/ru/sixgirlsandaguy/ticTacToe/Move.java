@@ -18,5 +18,24 @@ public class Move
 	{
 		return s.charAt(0);
 	}
-}
 
+	public boolean isValid(String move)
+	{
+		if(move.length() > 1)
+		{
+			return false;
+		}
+		else if( move.equals("0"))
+		{
+			return false;
+		}
+
+
+		if(Character.isDigit(stringToChar(move)))
+		{
+			return true;
+		}
+
+		return false;
+	}
+}
