@@ -8,5 +8,10 @@ public class Move
 	{
 		position = ' ';
 	}
+
+	public char getMove()
+	{
+		return position;
+	}
 }
 
