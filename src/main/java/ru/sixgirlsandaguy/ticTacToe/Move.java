@@ -1,12 +1,29 @@
 package ru.sixgirlsandaguy.ticTacToe;
+import java.util.Scanner;
 
 public class Move 
 {
 	private char position;
-	
+
 	public Move()
 	{
 		position = ' ';
+	}
+
+	public void setMove()
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("What cell do you want to mark? ");
+		String move;
+		move = sc.nextLine();
+		boolean valid = isValid(move);
+		if(valid == false)
+		{
+			System.out.println("Invalid move, please select a number from  1-9.");
+			setMove();
+		}
+
+		position = stringToChar(move);
 	}
 
 	public char getMove()
