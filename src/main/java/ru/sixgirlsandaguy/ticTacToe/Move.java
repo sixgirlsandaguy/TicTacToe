@@ -13,5 +13,10 @@ public class Move
 	{
 		return position;
 	}
+
+	public char stringToChar(String s)
+	{
+		return s.charAt(0);
+	}
 }
 
