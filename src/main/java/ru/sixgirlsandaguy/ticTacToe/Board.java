@@ -21,6 +21,11 @@ public class Board {
 			}
 		}
 	}
+
+	public char[][] getBoard() 
+	{
+		return board;
+	}
 	
 	public void setCell(char player, int N)
 	{
@@ -54,9 +59,37 @@ public class Board {
 		res[1] = col;
 		
 		return res;
-		
 	}
 	
+	public boolean isOccupied(int N)
+	{
+		int [] pos = cell_help(N);
+		
+		if (board[pos[0]][pos[1]] == 'X' || board[pos[0]][pos[1]] == 'O')
+		{
+			return true;
+		}
+		
+		return false;
+	}
+
+	public boolean isFull()
+	{
+		for (int i = 0; i < dim; i++)
+		{
+			for (int j = 0; j < dim; j++)
+			{
+				if (board[i][j] != 'X' && board[i][j] != 'O')
+				{
+					return false;
+				}
+			}
+		}
+		
+		return true;
+	}
+	
+
 	public void printBoard() 
 	{
 		for (int i = 0; i < Board.dim; i++)
@@ -68,6 +101,7 @@ public class Board {
 			System.out.println();
 		}
 	}
+
 }
 
 
