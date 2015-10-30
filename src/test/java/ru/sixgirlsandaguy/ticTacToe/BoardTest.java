@@ -88,6 +88,24 @@ public class BoardTest {
 		assertEquals(occupied, b.isFull());
 	}
 
+	@Test 
+	public void testGetEmptyBoard()
+	{
+		Board b = new Board();
+		char[][] test = {{'1','2','3'},{'4','5','6'},{'7','8','9'}};
+		assertEquals(test, b.getBoard());
+	}
+
+	public void testGetBoard()
+	{
+		Board b = new Board();
+		b.setCell('0', 3);
+		b.setCell('X', 5);
+		b.setCell('X', 8);
+		char[][] test = {{'1','2','O'},{'4','X','6'},{'7','X','9'}};
+		assertEquals(test, b.getBoard());
+	}
+
 
 }
 

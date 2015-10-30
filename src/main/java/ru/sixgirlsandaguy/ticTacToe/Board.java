@@ -21,6 +21,11 @@ public class Board {
 			}
 		}
 	}
+
+	public char[][] getBoard() 
+	{
+		return board;
+	}
 	
 	public void setCell(char player, int N)
 	{
@@ -96,6 +101,7 @@ public class Board {
 			System.out.println();
 		}
 	}
+
 }
 
 
