@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Move 
 {
-	private char position;
+	private int position;
 
 	public Move()
 	{
@@ -26,7 +26,7 @@ public class Move
 		position = stringToChar(move);
 	}
 
-	public char getMove()
+	public int getMove()
 	{
 		return position;
 	}
