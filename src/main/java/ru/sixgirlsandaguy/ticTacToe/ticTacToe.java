@@ -1,7 +1,7 @@
 package ru.sixgirlsandaguy.ticTacToe;
 
-public class ticTacToe {
-	
+public class ticTacToe
+{
 	private Board board;
 	private Player p1;
 	private Player p2;
@@ -51,12 +51,18 @@ public class ticTacToe {
 	public static void main(String[] args) 
 	{
 		boolean winner = false;
+		boolean draw = false;
 		ticTacToe game = new ticTacToe();
 		
 		game.board.printBoard();
 
 		do
 		{
+			if(game.board.isFull())
+			{
+				draw = true;
+				break;
+			}
 			helpP1(game);
 			if(game.result.isWinner(game.p1.getPlayer(), game.board.getBoard()))
 			{
@@ -65,6 +71,11 @@ public class ticTacToe {
 			}
 			game.board.printBoard();
 			
+			if(game.board.isFull())
+			{
+				draw = true;
+				break;
+			}
 			helpP2(game);
 			if(game.result.isWinner(game.p2.getPlayer(), game.board.getBoard()))
 			{
@@ -73,9 +84,8 @@ public class ticTacToe {
 			}
 			game.board.printBoard();
 		}
-		while(winner == false);
+		while(winner == false || draw == true);
 		
-		game.board.printBoard();
 		
 		if(winner == false)
 		{
@@ -83,6 +93,7 @@ public class ticTacToe {
 		}
 		else
 		{
+			game.board.printBoard();
 			System.out.println("Congratulation " + game.result.getWinner() + " you won!");
 		}		
 	}
