@@ -23,7 +23,7 @@ public class ticTacToe
 		game.move.setMove();
 		if(game.board.isOccupied(game.move.getMove()))
 		{
-			System.out.println("Invalid move p1!");
+			System.out.println("This cell is already taken, please pick a number from the board!");
 			game.board.printBoard();
 			helpP1(game);
 		}
@@ -38,7 +38,7 @@ public class ticTacToe
 		game.move.setMove();
 		if(game.board.isOccupied(game.move.getMove()))
 		{
-			System.out.println("Invalid move p2!");
+			System.out.println("This cell is already taken, please pick a number from the board!");
 			game.board.printBoard();
 			helpP2(game);
 		}
