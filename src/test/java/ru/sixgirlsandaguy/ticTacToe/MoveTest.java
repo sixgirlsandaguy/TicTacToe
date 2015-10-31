@@ -18,8 +18,18 @@ public class MoveTest
 		Move m = new Move();
 		assertEquals('b' , m.stringToChar("b"));
 	}
-
-		@Test
+    
+    @Test
+    public void testGetMove()
+    {
+        Move m = new Move();
+        
+        m.setPos(5);
+        
+        assertEquals(5, m.getMove());
+    }
+    
+    @Test
 	public void isValidString() 
 	{
 		Move m = new Move();
