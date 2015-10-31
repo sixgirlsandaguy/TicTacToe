@@ -22,9 +22,11 @@ public class Move
 			System.out.println("Invalid move, please select a number from  1-9.");
 			setMove();
 		}
-        
-        char c = stringToChar(move);
-        setPos(c - 48);
+		else
+		{ 
+        		char c = stringToChar(move);
+			setPos(c - 48);
+		}
     }
     
     public void setPos(int c)
