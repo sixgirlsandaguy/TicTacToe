@@ -12,13 +12,17 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 mainClassName = "ru.sixgirlsandaguy.ticTacToe.ticTacToe"
+
+jar {
+	manifest { attributes("Main-Class": "ru.sixgirlsandaguy.ticTacToe.ticTacToe") }
+}
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use 'jcenter' for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
-
+ 
 // In this section you declare the dependencies for your production and test code
 dependencies {
     // The production code uses the SLF4J logging API at compile time
@@ -29,4 +33,8 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
+}
+
+run {
+	standardInput = System.in
 }
