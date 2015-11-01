@@ -11,10 +11,10 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = "ru.sixgirlsandaguy.ticTacToe.ticTacToe"
+mainClassName = "ru.sixgirlsandaguy.ticTacToe.ticTacToeWeb"
 
 jar {
-	manifest { attributes("Main-Class": "ru.sixgirlsandaguy.ticTacToe.ticTacToe") }
+	manifest { attributes("Main-Class": "ru.sixgirlsandaguy.ticTacToe.ticTacToeWeb") }
 }
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -38,4 +38,8 @@ dependencies {
 
 run {
 	standardInput = System.in
+}
+
+task stage {
+	dependsOn installDist
 }
