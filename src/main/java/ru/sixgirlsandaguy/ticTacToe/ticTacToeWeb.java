@@ -16,15 +16,16 @@ public class ticTacToeWeb implements SparkApplication
 		String port = System.getenv("PORT");
 		if(port != null)
 		{
-			port(Integer.valueOf(port));
+		    setPort(Integer.valueOf(port));
 		}
 
-		//ticTacToe.init();
+		ticTacToe.init();
 	}
 
 	//@Override
 	public void init()
 	{
+		
 		if (game == null)
 		{
 			game = new ticTacToe();
