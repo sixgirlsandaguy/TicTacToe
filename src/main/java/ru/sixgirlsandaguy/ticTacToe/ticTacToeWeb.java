@@ -22,13 +22,15 @@ public class ticTacToeWeb implements SparkApplication
 		ticTacToe.init();
 	}
 
-	//@Override
+	@Override
 	public void init()
 	{
-		
+
 		if (game == null)
 		{
 			game = new ticTacToe();
 		}
+
+		post("/move", (req, res) -> game);
 	}
 }
