@@ -5,13 +5,48 @@
 
 td 
 {
-	height: 50;
-	width: 50;
+	height: 150;
+	width: 150;
 	text-align: center;
-	border: 1px solid green;
+	border: 1px solid black;
+	font-size: 50px;
+	background-color: #EEEEEE;
 }
+
 #jumbotron
 {
-    backgroup-color: #87CEEB;
-    color: #fffffF;
+	background-color: #87CEEB;
+	color: #fffffF;
+}
+
+#game
+{
+	position: absolute;
+	margin: auto;
+	top: 250px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 450px;
+	height: 450px;
+}
+
+#winnerdiv
+{
+	position: absolute;
+	margin: auto;
+	top: 470px;
+	bottom: 0;
+	left: 190px;
+	font-size: 30px;
+}
+
+#newgamebutton
+{
+	position: absolute;
+	margin: auto;
+	top: 520px;
+	left: 355px;
+	bottom: 0;
+	right: 0; 
 }

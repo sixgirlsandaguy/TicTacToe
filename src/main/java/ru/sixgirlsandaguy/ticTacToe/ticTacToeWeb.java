@@ -6,7 +6,6 @@ import spark.servlet.SparkApplication;
 
 public class ticTacToeWeb implements SparkApplication
 {
-	//buaa til constructor?
 	private ticTacToe game;
 
 	public static void main(String[] args)
@@ -22,7 +21,6 @@ public class ticTacToeWeb implements SparkApplication
 		ticTacToe.init();
 	}
 
-	@Override
 	public void init()
 	{
 
@@ -30,25 +28,36 @@ public class ticTacToeWeb implements SparkApplication
 		{
 			game = new ticTacToe();
 		}
-      	
-		post("/cell", (request,response)->{		    
-			    
-			    int pos = Integer.valueOf(request.queryParams("cell"));
-			    char currPlayer = game.playerTurn();
-			    game.play(pos);
-			    return currPlayer;
-			
-		    });
-		post("/newgame", (request,response)->{    
-			    game = new ticTacToe();
-			    return true;
-			
-		    });
+
+		Spark.post("/cell", new Route()
+		{
+			@Override
+			public Object handle(final Request request, final Response response)
+			{
+				int pos = Integer.valueOf(request.queryParams("cell"));
+				char currPlayer = game.playerTurn();
+				game.play(pos);
+				return currPlayer;
+			}
+		});
 		
-		post("/isgameover", (request,response)->{   
-	     			    return game.winner();
-			
-			
-		    });
+		Spark.post("/newgame", new Route()
+		{
+			@Override
+			public Object handle(final Request request, final Response response)
+			{
+				game = new ticTacToe();
+				return true;
+			}	 	
+		});	
+
+		Spark.post("/isgameover", new Route()
+		{
+			@Override	
+			public Object handle(final Request request, final Response response)
+			{	
+				return game.winner();
+			}
+		});
 	}
 }
