@@ -51,7 +51,7 @@ td
 	right: 0; 
 }
 
-#gameover
+.gameover
 {
 	pointer-events: none;
 }
