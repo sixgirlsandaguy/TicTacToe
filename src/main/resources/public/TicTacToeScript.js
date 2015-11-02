@@ -5,11 +5,11 @@ $(function(){
 	var cell = $(this).attr('id'); 
 	if($(this).html()==""){
 	    $.ajax({
+		type: "post"
 		url: "/cell",
-		type: "post",
 		data: cell
 	   
-	   }).done(function(result)){
+	   }).done(function(result){
 	       $("#" + cell).html(result);
 	});
 	};
