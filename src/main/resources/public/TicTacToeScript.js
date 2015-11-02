@@ -35,15 +35,15 @@ function is_game_over(){
 	}).done(function(result){
 	    if(result == 'X'){
 		$("#winner").html("X Won!");
-		restart_game();
+	
 	    }
 	    if(result == 'O'){
 		$("#winner").html("O Won!");
-		restart_game();
+	
 	    }
 	    if(result == 'Z'){
 		$("#winner").html("Draw!");
-		restart_game();
+		
 	    }
 });    
 }
