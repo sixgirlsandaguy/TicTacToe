@@ -2,7 +2,7 @@
 $(function(){
     
     restart_game();
-    clear_board();
+    
     $('td').click( function(){
 	var cell = $(this).attr('id'); 
 	if($(this).html()==""){
