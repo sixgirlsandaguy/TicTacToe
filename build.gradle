@@ -82,5 +82,5 @@ run {
 }
 
 task stage {
-	dependsOn installDist
+	dependsOn installApp
 }
