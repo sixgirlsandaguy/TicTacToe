@@ -10,7 +10,7 @@ $(function(){
 		data: cell
 	   
 	   }).done(function(result){
-	       $("#" + cell).html(result);
+	       $("#" + cell).html("X");
 	});
 	};
 	event.preventDefault();
