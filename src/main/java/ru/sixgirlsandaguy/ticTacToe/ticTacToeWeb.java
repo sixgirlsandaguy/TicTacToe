@@ -34,7 +34,7 @@ public class ticTacToeWeb implements SparkApplication
 		
 		post("/cell", (request,response)->{
 			
-			return Integer.valueOf(request.queryParams("cell"));	
+			return request.queryParams("cell"));	
 		    });
 
   
