@@ -6,7 +6,6 @@ import spark.servlet.SparkApplication;
 
 public class ticTacToeWeb implements SparkApplication
 {
-	//buaa til constructor?
 	private ticTacToe game;
 
 	public static void main(String[] args)
@@ -22,7 +21,6 @@ public class ticTacToeWeb implements SparkApplication
 		ticTacToe.init();
 	}
 
-	//@Override
 	public void init()
 	{
 
@@ -42,27 +40,6 @@ public class ticTacToeWeb implements SparkApplication
 				return currPlayer;
 			}
 		});
-
-		/*post(new Route("/cell")
-		{
-			@Override
-			public Object handle(final Request request, final Response response)
-			{
-				int pos = Integer.valueOf(request.queryParams("cell"));
-				char currPlayer = game.playerTurn();
-				game.play(pos);
-				return currPlayer;
-			}
-		});*/
-      	
-		/*post("/cell", (request, response) -> {		    
-			    
-			    int pos = Integer.valueOf(request.queryParams("cell"));
-			    char currPlayer = game.playerTurn();
-			    game.play(pos);
-			    return currPlayer;
-			
-		    });*/
 		
 		Spark.post("/newgame", new Route()
 		{
@@ -73,25 +50,6 @@ public class ticTacToeWeb implements SparkApplication
 				return true;
 			}	 	
 		});	
-		
-		/*
-		post(new Route("/newgame")
-		{
-			@Override
-			public Object handle(final Request request, final Response response)
-			{
-				game = new ticTacToe();
-				return true;
-			}	
-		});*/
-		
-		/*
-		post("/newgame", (request,response)->{    
-			    game = new ticTacToe();
-			    return true;
-			
-		    });
-		*/
 
 		Spark.post("/isgameover", new Route()
 		{
@@ -101,21 +59,5 @@ public class ticTacToeWeb implements SparkApplication
 				return game.winner();
 			}
 		});
-
-		/*
-		post(new Route("/isgameover")
-		{
-			@Override
-			public Object handle(final Request request, final Response response)
-			{
-				return game.winner();
-			}
-		});*/
-		/*
-		post("/isgameover", (request,response)->{   
-	     			    return game.winner();
-			
-			
-		    });*/
 	}
 }
