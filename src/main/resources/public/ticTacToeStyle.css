@@ -12,6 +12,18 @@ td
 }
 #jumbotron
 {
-    backgroup-color: #87CEEB;
-    color: #fffffF;
+	background-color: #87CEEB;
+	color: #fffffF;
+}
+
+#game
+{
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
 }
