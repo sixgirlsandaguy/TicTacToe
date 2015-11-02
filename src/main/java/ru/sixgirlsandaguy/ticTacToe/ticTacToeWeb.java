@@ -31,7 +31,7 @@ public class ticTacToeWeb implements SparkApplication
 			game = new ticTacToe();
 		}
       	
-		post("/cell", (request,response)->{		    
+		post("/cell", (request, response) -> {		    
 			    
 			    int pos = Integer.valueOf(request.queryParams("cell"));
 			    char currPlayer = game.playerTurn();
