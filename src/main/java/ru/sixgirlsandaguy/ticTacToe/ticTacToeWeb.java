@@ -37,7 +37,9 @@ public class ticTacToeWeb implements SparkApplication
 			game.play(pos);
 			return game.playerTurn();	
 		    });
-
+		
+		post("/newgame", (request,response)->{
+			game = new ticTacToe();
   
 	}
 }

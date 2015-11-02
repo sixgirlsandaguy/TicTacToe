@@ -11,6 +11,7 @@ $(function(){
 	   
 	   }).done(function(result){
 	       $("#" + cell).html(result);
+	       
 	});
 	};
 	event.preventDefault();
@@ -18,11 +19,31 @@ $(function(){
     });
 
     $("#restart").click( function(){
-	for(var i = 1; i < 10; i++){
-	    $("#"+i).html("");
-	}
+	restart_game();
 	
 	});
 
 
 });
+
+
+
+function is_game_over(){
+
+}
+
+
+
+function restart_game(){
+
+    
+	for(var i = 1; i < 10; i++){
+	    $("#"+i).html("");
+	   }
+	$.ajax({
+	    type: "post",
+	    url: "/newgame"
+	    ]);
+
+    
+}
