@@ -43,7 +43,7 @@ public class ticTacToeWeb implements SparkApplication
 			return true;
 		    });
 
-		post("/isgameover", (request,response->{
+		post("/isgameover", (request,response)->{
 			    
 			    return game.winner();
 			});
