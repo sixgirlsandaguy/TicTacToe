@@ -45,7 +45,7 @@ function is_game_over(){
 		$("#winner").html("Draw!");
 		restart_game();
 	    }
-    
+});    
 }
 
 
