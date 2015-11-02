@@ -22,7 +22,7 @@ public class ticTacToeWeb implements SparkApplication
 		ticTacToe.init();
 	}
 
-	@Override
+	//@Override
 	public void init()
 	{
 
@@ -30,15 +30,27 @@ public class ticTacToeWeb implements SparkApplication
 		{
 			game = new ticTacToe();
 		}
+
+		post(new Route("/cell")
+		{
+			@Override
+			public Object handle(Request request, Response response)
+			{
+				int pos = Integer.valueOf(request.queryParams("cell"));
+				char currPlayer = game.playerTurn();
+				game.play(pos);
+				retrun currPlayer;
+			}
+		}
       	
-		post("/cell", (request, response) -> {		    
+		/*post("/cell", (request, response) -> {		    
 			    
 			    int pos = Integer.valueOf(request.queryParams("cell"));
 			    char currPlayer = game.playerTurn();
 			    game.play(pos);
 			    return currPlayer;
 			
-		    });
+		    });*/
 		post("/newgame", (request,response)->{    
 			    game = new ticTacToe();
 			    return true;
