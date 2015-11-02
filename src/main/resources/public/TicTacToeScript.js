@@ -37,15 +37,15 @@ function is_game_over(){
 	}).done(function(result){
 	    if(result == 'X'){
 		$("#winner").html("X Won!");
-	
+		event.preventDefault();
 	    }
 	    if(result == 'O'){
 		$("#winner").html("O Won!");
-	
+		event.preventDefault();
 	    }
 	    if(result == 'Z'){
 		$("#winner").html("Draw!");
-		
+		event.preventDefault();
 	    }
 });    
 }
