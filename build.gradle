@@ -10,6 +10,7 @@
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'pmd'
 
 mainClassName = "ru.sixgirlsandaguy.ticTacToe.ticTacToeWeb"
 
@@ -35,11 +36,30 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.sparkjava:spark-core:2.3'
 }
+pmd {
+	ignoreFailures = true;
+	toolVersion = '5.1.3'
+ 	ruleSets = [
+            'java-basic',
+            'java-braces',
+            'java-codesize',
+            'java-design',
+            'java-empty',
+            'java-imports',
+            'java-junit',
+            'java-migrating',
+            'java-naming',
+            'java-strings',
+            'java-typeresolution',
+            'java-unnecessary',
+            'java-unusedcode'
+            ]
+}
 
 run {
 	standardInput = System.in
 }
 
 task stage {
-	dependsOn installDist
+	dependsOn installApp
 }
