@@ -1,4 +1,4 @@
-done.package ru.sixgirlsandaguy.ticTacToe;
+package ru.sixgirlsandaguy.ticTacToe;
 
 import spark.*;
 import static spark.Spark.*;
