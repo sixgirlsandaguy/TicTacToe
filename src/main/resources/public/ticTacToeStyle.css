@@ -5,11 +5,14 @@
 
 td 
 {
-	height: 50;
-	width: 50;
+	height: 150;
+	width: 150;
 	text-align: center;
-	border: 1px solid green;
+	border: 1px solid black;
+	font-size: 50px;
+	background-color: #EEEEEE;
 }
+
 #jumbotron
 {
 	background-color: #87CEEB;
@@ -20,10 +23,10 @@ td
 {
 	position: absolute;
 	margin: auto;
-	top: 0;
+	top: 200px;
 	bottom: 0;
 	right: 0;
 	left: 0;
-	width: 100px;
-	height: 100px;
+	width: 450px;
+	height: 450px;
 }
