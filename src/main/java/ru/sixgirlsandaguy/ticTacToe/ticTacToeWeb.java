@@ -31,7 +31,7 @@ public class ticTacToeWeb implements SparkApplication
 			game = new ticTacToe();
 		}
 
-		post(new Route("/cell")
+		Spark.post("/cell", new Route()
 		{
 			@Override
 			public Object handle(final Request request, final Response response)
@@ -42,6 +42,18 @@ public class ticTacToeWeb implements SparkApplication
 				return currPlayer;
 			}
 		});
+
+		/*post(new Route("/cell")
+		{
+			@Override
+			public Object handle(final Request request, final Response response)
+			{
+				int pos = Integer.valueOf(request.queryParams("cell"));
+				char currPlayer = game.playerTurn();
+				game.play(pos);
+				return currPlayer;
+			}
+		});*/
       	
 		/*post("/cell", (request, response) -> {		    
 			    
@@ -52,7 +64,17 @@ public class ticTacToeWeb implements SparkApplication
 			
 		    });*/
 		
-
+		Spark.post("/newgame", new Route()
+		{
+			@Override
+			public Object handle(final Request request, final Response response)
+			{
+				game = new ticTacToe();
+				return true;
+			}	 	
+		});	
+		
+		/*
 		post(new Route("/newgame")
 		{
 			@Override
@@ -61,7 +83,7 @@ public class ticTacToeWeb implements SparkApplication
 				game = new ticTacToe();
 				return true;
 			}	
-		});
+		});*/
 		
 		/*
 		post("/newgame", (request,response)->{    
@@ -71,14 +93,24 @@ public class ticTacToeWeb implements SparkApplication
 		    });
 		*/
 
-		post(new Route("/isgameover")
+		Spark.post("/isgameover", new Route()
 		{
-			@Override
-			public Object handle(final wqRequest request, final Response response)
-			{
+			@Override	
+			public Object handle(final Request request, final Response response)
+			{	
 				return game.winner();
 			}
 		});
+
+		/*
+		post(new Route("/isgameover")
+		{
+			@Override
+			public Object handle(final Request request, final Response response)
+			{
+				return game.winner();
+			}
+		});*/
 		/*
 		post("/isgameover", (request,response)->{   
 	     			    return game.winner();
