@@ -6,7 +6,7 @@ $(function(){
 	if($(this).html()==""){
 	    $.post("/cell",cell);
 	   var currPlayer =  $.get("/player");
-	    $(this).html("currPlayer");
+	    $(this).html(currPlayer);
 	}    
 	event.preventDefault();
 	
