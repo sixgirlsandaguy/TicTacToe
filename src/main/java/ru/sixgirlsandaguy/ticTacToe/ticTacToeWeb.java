@@ -41,7 +41,7 @@ public class ticTacToeWeb implements SparkApplication
 				game.play(pos);
 				retrun currPlayer;
 			}
-		}
+		});
       	
 		/*post("/cell", (request, response) -> {		    
 			    
@@ -51,16 +51,39 @@ public class ticTacToeWeb implements SparkApplication
 			    return currPlayer;
 			
 		    });*/
+		
+
+		post(new Route("/newgame")
+		{
+			@Override
+			public Object handle(Request request, Response response)
+			{
+				game = new ticTacToe();
+				return true;
+			}	
+		});
+		
+		/*
 		post("/newgame", (request,response)->{    
 			    game = new ticTacToe();
 			    return true;
 			
 		    });
-		
+		*/
+
+		post(new Route("/isgameover")
+		{
+			@Override
+			public Object handle(Request request, Response response)
+			{
+				return game.winner();
+			}
+		});
+		/*
 		post("/isgameover", (request,response)->{   
 	     			    return game.winner();
 			
 			
-		    });
+		    });*/
 	}
 }
