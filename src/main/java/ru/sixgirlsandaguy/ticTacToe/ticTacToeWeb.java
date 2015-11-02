@@ -1,4 +1,4 @@
-package ru.sixgirlsandaguy.ticTacToe;
+done.package ru.sixgirlsandaguy.ticTacToe;
 
 import spark.*;
 import static spark.Spark.*;
@@ -31,22 +31,34 @@ public class ticTacToeWeb implements SparkApplication
 			game = new ticTacToe();
 		}
       	
-		
-		post("/cell", (request,response)->{
-			int pos = Integer.valueOf(request.queryParams("cell"));
-			char currPlayer = game.playerTurn();
-			game.play(pos);
-			return currPlayer;	
-		    });
-		
-		post("/newgame", (request,response)->{
-			game = new ticTacToe();
-			return true;
-		    });
-
-		post("/isgameover", (request,response)->{
+		post(new Route("/cell"){
+			@Override
+			public Object handle(Request request, Response response){
 			    
-			    return game.winner();
-			});
+			    
+			    int pos = Integer.valueOf(request.queryParams("cell"));
+			    char currPlayer = game.playerTurn();
+			    game.play(pos);
+			    return currPlayer;
+			
+			}	
+		    });
+		post(new Route("/newgame"){
+			@Override
+			public Object handle(Request request, Response response){
+			    
+			    game = new ticTacToe();
+			    return true;
+			}
+		    });
+		
+		post(new Route("/isgameover"){
+			@Override
+			public Object handle(Request request, Response response){
+			    
+	     			    return game.winner();
+			}
+			
+		    });
 	}
 }
