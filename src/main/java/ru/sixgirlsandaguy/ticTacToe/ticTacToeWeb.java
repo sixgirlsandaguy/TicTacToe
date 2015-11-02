@@ -42,5 +42,10 @@ public class ticTacToeWeb implements SparkApplication
 			game = new ticTacToe();
 			return true;
 		    });
+
+		post("/isgameover", (request,response->{
+			    
+			    return game.winner();
+			});
 	}
 }
