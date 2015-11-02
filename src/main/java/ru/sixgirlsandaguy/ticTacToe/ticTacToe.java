@@ -18,19 +18,29 @@ public class ticTacToe
 		
 	}
 
-   	public void play(int id)
-    	{
-    		int i = board.boardCounter();
-    	 
-    		if (i % 2 != 0)
+    	public void play(int id)
+   	{    	 
+    		if (playerTurn() == 'X')
     		{
     			board.setCell(p1.getPlayer(), id);
     		}
     		else
     		{
-    			board.setCell(p2.getPlayer(), id);    		
+    			board.setCell(p2.getPlayer(), id); 
     		}
     	}
+    
+    	public char playerTurn() 
+   	 {
+    		int i = board.boardCounter();
+    	
+    		if (i % 2 != 0)
+    		{
+    			return 'X';
+    		}
+    		return 'O';
+    	}
+
 
 	public char winner()
     	{
