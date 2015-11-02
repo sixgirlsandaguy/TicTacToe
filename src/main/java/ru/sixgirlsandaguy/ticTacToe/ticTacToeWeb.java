@@ -41,5 +41,6 @@ public class ticTacToeWeb implements SparkApplication
 		post("/newgame", (request,response)->{
 			game = new ticTacToe();
   
+		    });
 	}
 }
