@@ -3,8 +3,12 @@ $(function(){
 
     $('td').click( function(){
 	var cell = $(this).attr('id'); 
-	$(this).html("X");
-	
+	if($(this).html()==""){
+	    $.post("/cell",cell);
+	   var currPlayer =  $.get("/player");
+	    $(this).html("currPlayer");
+	}    
+	event.preventDefault();
 	
     });
 
