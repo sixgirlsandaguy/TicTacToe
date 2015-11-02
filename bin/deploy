@@ -1,6 +1,7 @@
 #!/bin/bash -e
 
 APP="ticTacToe"
+bin/clean
 bin/package
 
 test -f /tmp/${APP} && rm -r /tmp/${APP}
