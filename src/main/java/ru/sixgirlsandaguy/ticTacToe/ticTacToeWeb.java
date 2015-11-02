@@ -30,7 +30,12 @@ public class ticTacToeWeb implements SparkApplication
 		{
 			game = new ticTacToe();
 		}
+      	
+		
+		post("/cell", (request,response)->{
+			return Integer.valueOf(request.params("cell"));	
+		    });
 
-		post("/move", (req, res) -> game);
+  
 	}
 }
