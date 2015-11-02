@@ -17,53 +17,78 @@ public class ticTacToe
 		result = new Result();
 		
 	}
-	
-	private static void helpP1(ticTacToe game)
+
+   	public void play(int id)
+    	{
+    		int i = board.boardCounter();
+    	 
+    		if (i % 2 != 0)
+    		{
+    			board.setCell(p1.getPlayer(), id);
+    		}
+    		else
+    		{
+    			board.setCell(p2.getPlayer(), id);    		
+    		}
+    	}
+
+	public char winner()
+    	{
+    		if (result.isWinner(p1.getPlayer(), board.getBoard()) == true)
+    		{
+    			return 'X';
+   	 	}
+    		else if (result.isWinner(p2.getPlayer(), board.getBoard()) == true)
+    		{
+    			return 'O';
+    		}
+    		if (board.isFull())
+    		{
+        		return 'Z';
+    		}
+    		return ' ';
+    	}
+
+	private void helpP1()
 	{
-		game.move.setMove();
-		if(game.board.isOccupied(game.move.getMove()))
+		move.setMove();
+		if(board.isOccupied(move.getMove()))
 		{
-			System.out.println("This cell is already taken, please pick a number from the board!");
-			game.board.printBoard();
-			helpP1(game);
+			System.out.println("Invalid move p1!");
+			board.printBoard();
+			helpP1();
 		}
 		else
 		{
-			game.board.setCell(game.p1.getPlayer(), game.move.getMove());
+			board.setCell(p1.getPlayer(), move.getMove());
 		}
 	}
 	
-	private static void helpP2(ticTacToe game)
+	private void helpP2()
 	{
-		game.move.setMove();
-		if(game.board.isOccupied(game.move.getMove()))
+		move.setMove();
+		if(board.isOccupied(move.getMove()))
 		{
-			System.out.println("This cell is already taken, please pick a number from the board!");
-			game.board.printBoard();
-			helpP2(game);
+			System.out.println("Invalid move p2!");
+			board.printBoard();
+			helpP2();
 		}
 		else
 		{
-			game.board.setCell(game.p2.getPlayer(), game.move.getMove());
+			board.setCell(p2.getPlayer(), move.getMove());
 		}
 	}
 
 	public static void main(String[] args) 
 	{
 		boolean winner = false;
-		boolean draw = false;
 		ticTacToe game = new ticTacToe();
 		
 		game.board.printBoard();
 
 		do
 		{
-			if(game.board.isFull())
-			{
-				draw = true;
-				break;
-			}
-			helpP1(game);
+			game.helpP1();
 			if(game.result.isWinner(game.p1.getPlayer(), game.board.getBoard()))
 			{
 				winner = true;
@@ -71,12 +96,7 @@ public class ticTacToe
 			}
 			game.board.printBoard();
 			
-			if(game.board.isFull())
-			{
-				draw = true;
-				break;
-			}
-			helpP2(game);
+			game.helpP2();
 			if(game.result.isWinner(game.p2.getPlayer(), game.board.getBoard()))
 			{
 				winner = true;
@@ -84,8 +104,9 @@ public class ticTacToe
 			}
 			game.board.printBoard();
 		}
-		while(winner == false || draw == true);
+		while(winner == false);
 		
+		game.board.printBoard();
 		
 		if(winner == false)
 		{
@@ -93,7 +114,6 @@ public class ticTacToe
 		}
 		else
 		{
-			game.board.printBoard();
 			System.out.println("Congratulation " + game.result.getWinner() + " you won!");
 		}		
 	}
