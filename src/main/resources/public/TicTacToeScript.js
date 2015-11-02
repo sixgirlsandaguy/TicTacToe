@@ -5,7 +5,7 @@ $(function(){
 	var cell = $(this).attr('id'); 
 	if($(this).html()==""){
 	    $.ajax({
-		type: "post"
+		type: "post",
 		url: "/cell",
 		data: cell
 	   
