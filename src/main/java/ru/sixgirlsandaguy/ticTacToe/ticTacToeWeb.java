@@ -33,7 +33,8 @@ public class ticTacToeWeb implements SparkApplication
       	
 		
 		post("/cell", (request,response)->{
-			
+			int cell = Integer.valueOf(request.queryParams("cell"));
+			System.out.println(cell);
 			return "XorO";	
 		    });
 
