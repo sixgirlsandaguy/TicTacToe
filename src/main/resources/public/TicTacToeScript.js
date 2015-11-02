@@ -7,7 +7,7 @@ $(function(){
 	    $.ajax({
 		type: "post",
 		url: "/cell",
-		data: cell
+		data:"cell=" + cell
 	   
 	   }).done(function(result){
 	       $("#" + cell).html(result);
