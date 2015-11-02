@@ -22,6 +22,23 @@ public class Board {
 		}
 	}
 
+	public int boardCounter() 
+	{
+		int count = 0;
+		for (int i = 0; i < DIM; i++)
+		{
+			for (int j = 0; j < DIM; j++)
+			{
+				if (Character.isDigit(board[i][j]))
+				{
+					count++;
+				}
+			}
+		}
+		
+		return count;
+	}
+
 	public char[][] getBoard() 
 	{
 		return board;
