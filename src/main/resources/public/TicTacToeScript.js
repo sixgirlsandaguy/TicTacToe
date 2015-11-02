@@ -37,15 +37,15 @@ function is_game_over(){
 	}).done(function(result){
 	    if(result == 'X'){
 		$("#winner").html("X Won!");
-	
+		$("#gameboard").addClass("gameover");
 	    }
 	    if(result == 'O'){
 		$("#winner").html("O Won!");
-	
+	    	$("#gameboard").addClass("gameover");
 	    }
 	    if(result == 'Z'){
 		$("#winner").html("Draw!");
-		
+		$("#gameboard").addClass("gameover");
 	    }
 });    
 }
@@ -65,5 +65,5 @@ function restart_game(){
 	    });
     
     $("#winner").html("");
-    
+    $("#gameboard").removeClass("gameover");
 }

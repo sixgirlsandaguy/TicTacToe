@@ -50,3 +50,8 @@ td
 	bottom: 0;
 	right: 0; 
 }
+
+.gameover
+{
+	pointer-events: none;
+}
