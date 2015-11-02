@@ -23,7 +23,7 @@ td
 {
 	position: absolute;
 	margin: auto;
-	top: 200px;
+	top: 250px;
 	bottom: 0;
 	right: 0;
 	left: 0;
@@ -33,10 +33,20 @@ td
 
 #winnerdiv
 {
-
+	position: absolute;
+	margin: auto;
+	top: 470px;
+	bottom: 0;
+	left: 190px;
+	font-size: 30px;
 }
 
 #newgamebutton
 {
-
+	position: absolute;
+	margin: auto;
+	top: 520px;
+	left: 355px;
+	bottom: 0;
+	right: 0; 
 }
