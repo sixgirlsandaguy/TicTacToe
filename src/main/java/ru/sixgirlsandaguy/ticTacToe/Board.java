@@ -2,18 +2,18 @@ package ru.sixgirlsandaguy.ticTacToe;
 
 public class Board {
 
-	public static int dim = 3;
+	private int DIM = 3;
 	private	char[][] board;
 
 	public Board() 
 	{
-		board = new char [dim][dim];
+		board = new char [DIM][DIM];
 		
 		char temp = 49;
 
-		for (int i = 0; i < Board.dim; i++)
+		for (int i = 0; i < DIM; i++)
 		{
-			for (int j = 0; j < Board.dim; j++)
+			for (int j = 0; j < DIM; j++)
 			{
 				
 				board[i][j] = temp;
@@ -25,9 +25,9 @@ public class Board {
 	public int boardCounter() 
 	{
 		int count = 0;
-		for (int i = 0; i < dim; i++)
+		for (int i = 0; i < DIM; i++)
 		{
-			for (int j = 0; j < dim; j++)
+			for (int j = 0; j < DIM; j++)
 			{
 				if (Character.isDigit(board[i][j]))
 				{
@@ -92,9 +92,9 @@ public class Board {
 
 	public boolean isFull()
 	{
-		for (int i = 0; i < dim; i++)
+		for (int i = 0; i < DIM; i++)
 		{
-			for (int j = 0; j < dim; j++)
+			for (int j = 0; j < DIM; j++)
 			{
 				if (board[i][j] != 'X' && board[i][j] != 'O')
 				{
@@ -109,9 +109,9 @@ public class Board {
 
 	public void printBoard() 
 	{
-		for (int i = 0; i < Board.dim; i++)
+		for (int i = 0; i < DIM; i++)
 		{
-			for (int j = 0; j < Board.dim; j++)
+			for (int j = 0; j < DIM; j++)
 			{
 				System.out.print(board[i][j] + " ");
 			}

@@ -1,0 +1,17 @@
+#gameboard
+{
+	border: 1px solid black;
+}
+
+td 
+{
+	height: 50;
+	width: 50;
+	text-align: center;
+	border: 1px solid green;
+}
+#jumbotron
+{
+    backgroup-color: #87CEEB;
+    color: #fffffF;
+}
