@@ -106,7 +106,40 @@ public class BoardTest {
 		assertEquals(test, b.getBoard());
 	}
 
+	@Test
+	public void testBoardCounter() {
+		
+		Board b = new Board();
+		assertEquals(9, b.boardCounter());
+	}
+	
+	@Test
+	public void testBoardCounterWithXAndO() {
+		
+		Board b = new Board();
+		b.setCell('X', 5);
+		b.setCell('O', 1);
+		
+		assertEquals(7, b.boardCounter());
+	}
+	
+	@Test
+	public void testBoardCounterWithFullBoard() {
+		
+		Board b = new Board();
 
+		b.setCell('X', 5);
+		b.setCell('O', 1);
+		b.setCell('X', 2);
+		b.setCell('O', 3);
+		b.setCell('X', 4);
+		b.setCell('O', 6);
+		b.setCell('X', 7);
+		b.setCell('O', 8);
+		b.setCell('X', 9);
+		
+		assertEquals(0, b.boardCounter());
+	}
 }
 
 
