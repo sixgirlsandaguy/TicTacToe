@@ -43,7 +43,7 @@ function restart_game(){
 	$.ajax({
 	    type: "post",
 	    url: "/newgame"
-	    ]);
+	    });
 
     
 }
