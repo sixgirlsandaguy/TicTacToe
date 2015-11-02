@@ -37,7 +37,7 @@ function is_game_over(){
 	}).done(function(result){
 	    if(result == 'X'){
 		$("#winner").html("X Won!");
-		event.preventDefault();
+		$("#gameboard").addClass("gameover");
 	    }
 	    if(result == 'O'){
 		$("#winner").html("O Won!");
