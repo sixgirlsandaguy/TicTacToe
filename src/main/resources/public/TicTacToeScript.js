@@ -41,11 +41,11 @@ function is_game_over(){
 	    }
 	    if(result == 'O'){
 		$("#winner").html("O Won!");
-		event.preventDefault();
+	    	$("#gameboard").addClass("gameover");
 	    }
 	    if(result == 'Z'){
 		$("#winner").html("Draw!");
-		event.preventDefault();
+		$("#gameboard").addClass("gameover");
 	    }
 });    
 }
@@ -65,5 +65,5 @@ function restart_game(){
 	    });
     
     $("#winner").html("");
-    
+    $("#gameboard").removeClass("gameover");
 }
