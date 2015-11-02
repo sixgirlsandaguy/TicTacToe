@@ -11,6 +11,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'pmd'
+apply plugin: 'jacoco'
 
 mainClassName = "ru.sixgirlsandaguy.ticTacToe.ticTacToeWeb"
 
@@ -55,11 +56,31 @@ pmd {
             'java-unusedcode'
             ]
 }
+jacoco {
+    toolVersion = "0.7.1.201405082137"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
+jacocoTestReport {
+    reports {
+        xml.enabled false
+        csv.enabled false
+        html.destination "${buildDir}/jacocoHtml"
+    }
+}
+test {
+    jacoco {
+        append = false
+        destinationFile = file("$buildDir/jacoco/jacocoTest.exec")
+        classDumpFile = file("$buildDir/jacoco/classpathdumps")
+    }
+}
+
+test.finalizedBy jacocoTestReport
 
 run {
 	standardInput = System.in
 }
 
 task stage {
-	dependsOn installApp
+	dependsOn installDist
 }
