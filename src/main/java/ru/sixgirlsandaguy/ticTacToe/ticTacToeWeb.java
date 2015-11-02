@@ -34,7 +34,7 @@ public class ticTacToeWeb implements SparkApplication
 		post(new Route("/cell")
 		{
 			@Override
-			public Object handle(Request request, Response response)
+			public Object handle(final Request request, final Response response)
 			{
 				int pos = Integer.valueOf(request.queryParams("cell"));
 				char currPlayer = game.playerTurn();
@@ -56,7 +56,7 @@ public class ticTacToeWeb implements SparkApplication
 		post(new Route("/newgame")
 		{
 			@Override
-			public Object handle(Request request, Response response)
+			public Object handle(final Request request, final Response response)
 			{
 				game = new ticTacToe();
 				return true;
@@ -74,7 +74,7 @@ public class ticTacToeWeb implements SparkApplication
 		post(new Route("/isgameover")
 		{
 			@Override
-			public Object handle(Request request, Response response)
+			public Object handle(final wqRequest request, final Response response)
 			{
 				return game.winner();
 			}
