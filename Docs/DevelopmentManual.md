@@ -18,7 +18,8 @@ Example of user entrance: nonniBobo@82.221.50.244. When a user is signed into th
 
 
 ##These are the commands you need to start contributing to the program
-* in a SSH client: git clone https://github.com/sixgirlsandaguy/TicTacToe.git
+* in a SSH client: git clone https://github.com/sixgirlsandaguy/TicTacToe.git </br>
+you can either clone the project locally or to the Advania Cloud Service
 * if the user has been added to the organization he can start contributing to the program after the groups Protocol that is defined in the [design report](https://github.com/sixgirlsandaguy/TicTacToe/blob/master/Docs/DesignReport.md "design report").
 
 
