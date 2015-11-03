@@ -10,6 +10,7 @@ install:
 script:
 - ./gradlew check
 - ./gradlew seleniumXvfb
+- heroku push --app sixgirlsandaguystaging
 
 deploy: 
   provider: heroku
