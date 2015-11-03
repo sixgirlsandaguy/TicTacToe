@@ -1,6 +1,9 @@
 language: java
 jdk:
 - oraclejdk8
+script:
+- ./gradlew check
+- ./gradlew seleniumXvfb
 sudo: false
 addons:
   apt:
