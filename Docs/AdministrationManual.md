@@ -17,3 +17,5 @@ Because the program has continuous delivery the administrator has nothing to do 
 * in shell: gradle run
 * put this URL in a browser that is installed in your computer: http://localhost:4567
 
+##Note
+See instructions on how to run the program in console in the file README.md
