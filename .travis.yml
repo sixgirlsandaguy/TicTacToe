@@ -1,19 +1,19 @@
 language: java
 
 jdk:
-	- oraclejdk8
+- oraclejdk8
 
 install: 
-	- wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-	- heroku plugins:install https://github.com/ddollar/heroku-push	
+- wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+- heroku plugins:install https://github.com/ddollar/heroku-push	
 	
 script:
-	- ./gradlew check
-	- ./gradlew seleniumXvfb
+- ./gradlew check
+- ./gradlew seleniumXvfb
 
 deploy: 
-	provider: heroku
-	api_key:
-		secure: B5JZagJHF/32wqHspE/lgvPy+gig4HKgbdbTLa7ShoECtzn9bEGdA12J2NusgTIfLartAKSHkd8di18NiBw026p67i87pbGEgx1J0XNZW/3dgV8B3X7URUz6lpwv1Z+Fyz1/8EL9sy4gK/B+IWCbvcFRMdtsMzxsgvxDEaGM+Rm6TL6WZbSvHTyyAcPVi7aQ1PX3M4jj/gctm7LTJNRoCCklLo5+DIjCa+pjg0iRWe4IWqrFA9l/e9lpWTumaGpT1QTsZIZUtAH08+UsqsE+b5aMzgEcJa3wcc5PewhIxiEUCaWHdDKWbl9RPjw4DfBqsFr34tXhC97A3/Hac57ZDJd/3WqTq+NjAj3P+3esWeo3MEz+8Mlm7bJs1is1YT9UQjJi7oiJ5sM+Q4pBhnqem3TjnXkVN8DHxiTueS1Yo3oIf/GS7jffP9oTXaPxrGARod1rv3AwHv8CzixsBrY6yXyz5jsCrqiXSddo21hb12Jsmiosg61vQwAA9wt4YcSU1ZySKovpSlDxeWCRe6ol2DrBJLTbvpjDeIV2UXkcasm5KWxMfK4JBF7huhlvpqPZDie3B70g3FTUXnnTbi7sVEhGY6WBIZZ2mxGW2Jr+yL25e4eDLfMSnk0/iVMQpNT8kruHT+ub14uprKE7rVaWtMu4L++fUJT3zE9F/mDFXlw=
-	app: sixgirlsandaguy
-	on: master
+  provider: heroku
+  api_key:
+    secure: B5JZagJHF/32wqHspE/lgvPy+gig4HKgbdbTLa7ShoECtzn9bEGdA12J2NusgTIfLartAKSHkd8di18NiBw026p67i87pbGEgx1J0XNZW/3dgV8B3X7URUz6lpwv1Z+Fyz1/8EL9sy4gK/B+IWCbvcFRMdtsMzxsgvxDEaGM+Rm6TL6WZbSvHTyyAcPVi7aQ1PX3M4jj/gctm7LTJNRoCCklLo5+DIjCa+pjg0iRWe4IWqrFA9l/e9lpWTumaGpT1QTsZIZUtAH08+UsqsE+b5aMzgEcJa3wcc5PewhIxiEUCaWHdDKWbl9RPjw4DfBqsFr34tXhC97A3/Hac57ZDJd/3WqTq+NjAj3P+3esWeo3MEz+8Mlm7bJs1is1YT9UQjJi7oiJ5sM+Q4pBhnqem3TjnXkVN8DHxiTueS1Yo3oIf/GS7jffP9oTXaPxrGARod1rv3AwHv8CzixsBrY6yXyz5jsCrqiXSddo21hb12Jsmiosg61vQwAA9wt4YcSU1ZySKovpSlDxeWCRe6ol2DrBJLTbvpjDeIV2UXkcasm5KWxMfK4JBF7huhlvpqPZDie3B70g3FTUXnnTbi7sVEhGY6WBIZZ2mxGW2Jr+yL25e4eDLfMSnk0/iVMQpNT8kruHT+ub14uprKE7rVaWtMu4L++fUJT3zE9F/mDFXlw=
+  app: sixgirlsandaguy
+  on: master
