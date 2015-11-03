@@ -1,9 +1,10 @@
 #!/bin/bash -e
 
-APP="TicTacToe"
-bin/clean
-bin/package
+sh ./bin/clean
+sh ./bin/compile
+sh ./bin/package
+sh ./bin/unit_test
 
-test -f /tmp/${APP} && rm -r /tmp/${APP}
-cp -r build/install/${APP} /tmp
-/tmp/${APP}/bin/${APP}
+./gradlew test
+./gradlew check
+./gradlew run
