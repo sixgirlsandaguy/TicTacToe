@@ -1,15 +1,15 @@
 language: java
 
 jdk:
-	-oraclejdk8
+	- oraclejdk8
 
 install: 
-	-wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-	-heroku plugins:install https://github.com/ddollar/heroku-push	
+	- wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+	- heroku plugins:install https://github.com/ddollar/heroku-push	
 	
 script:
-	-./gradlew check
-	-./gradlew seleniumXvfb
+	- ./gradlew check
+	- ./gradlew seleniumXvfb
 
 deploy: 
 	provider: heroku
