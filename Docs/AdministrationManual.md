@@ -12,7 +12,7 @@ The user needs to have access to the following:
 
 Because the program has continuous delivery the administrator has nothing to do with new versions of the program. 
 
-##The following command should be run in shell in order to get the program up and running:
+##The following command should be run in a SSH client in order to get the program up and running:
 * in shell: git clone https://github.com/sixgirlsandaguy/TicTacToe.git
 * in shell: gradle run
 * in a browser that is installed in your computer: http://localhost:4567
