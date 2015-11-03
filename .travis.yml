@@ -2,7 +2,7 @@ language: java
 
 script:
 - "./gradlew check"
-- heroku push --app sixgirlsandaguy-staging
+- heroku push --app sixgirlsandaguystaging
 - "./gradlew seleniumXvfb"
 
 deploy:
