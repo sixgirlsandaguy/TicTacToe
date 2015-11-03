@@ -1,13 +1,12 @@
 ##Developer Manual
 
 This manual is considered to be a guide for new developers that are going to access the project and work on it. </br>
-Staðfest er að forritið keyri á Unix skel á tölvu.
 
 ##Program
 
 The user needs to have access to the following:
 
-**GitHub:** The program is stored in the source control system Github. The user will be added to the Organization of the program, SixGirlsAndAGuy. Then, he has an access to the program repository, TicTacToe.
+**GitHub:** The program is stored in the source control system Github. The user will be added to the Organization of the program, SixGirlsAndAGuy. Then, he has an access to the program public repository, TicTacToe.
 
 **Shell:** The program runs on a virtual machine, a making of Advania Cloud Service.  <br /> Once a user has an access to the machine, he can sign up with the username(@)the ip number of the machine. The ip number is 82.221.50.244.
 Example of user entrance: nonniBobo@82.221.50.244 <br />
