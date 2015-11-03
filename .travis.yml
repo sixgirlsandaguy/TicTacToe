@@ -1,12 +1,1 @@
 language: java
-install:
- - heroku plugins:install https://github.com/ddollar/heroku-push
-script:
-- "./gradlew check"
-- "./gradlew seleniumXvfb"
-
-deploy:
-  provider: heroku
-  api_key:
-    secure: DpWirme2skop0WYXy8Ot81+QrDQfncJ42Jjv25olc5psGcsvaspDn711KIf0QQxpTYABD4k/mOg6Kz8zumieEsEqfKu1utRLZNvU3dAdSVwh8rOREwJzSpv0dBSyE/Ikeb50+Y1qKOUKJKdFH4KAilofJOXT9CVBusJBklU8uC/SJAd/y9GZAt9NVEIPvFLhHMCp1QFWWDlPt1fHpj6dgQQLywZZwiGBDLKGDZFEFdmiRQzpLrBruIgIOMAyXuIzKNBdjBHM9WZ/SlUwGFS+SVhN/fqImRLmrGQJnKNlVsPmxrh7+kCYMESa+DUmDp6Z10QZ9/ACgOgDmLQ8Yoj4j+exdbwNwegCJj4DzFrg6rnrI58Wcp5XFFmG0tCr1EJ6rd5U9W1TAs5iqy/NWKwm0FJQ5K52Kq0B1dkjHhTbwE4SCZmKvODw/QT6md39j2y+N1sh7ojdO4LV1qXAIc0mZBDVczPliRTJlrOOm+qJS3csD0xb1II5/iAmTQdzrQUyViAY3GdBDegg2jXOfaxSuS+LU57GM7HyUWGWug0dP8BQv9xIuuG5rY1gYZxXCKibEsnxvBCq6wJ3EpXgEhxiqFkcEwZ0SwOXPzQjtkF1XJshMPT9ce9jJSdv7DgswwDncrnJhgE2yfSAaHEFujf0FyasaWVDLw2R0HIYA4Yt9IQ=
-  app: sixgirlsandaguy
