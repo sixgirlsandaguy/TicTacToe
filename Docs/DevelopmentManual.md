@@ -11,7 +11,7 @@ The user needs to have access to the following:
 **SSH client:** The program runs on a Advania Cloud Service and local machines. 
 * In order to run the program on the Advania Cloud Service the user has to have access to and sign up with the username(@)the ip number of the machine. The ip number is 82.221.50.244.
 Example of user entrance: nonniBobo@82.221.50.244. When a user is signed into the machine, he can clone the repository from Github. </br>
-* Users can also clone the repository with a SSH client to their local machines. Mac users can for example use terminal and windows users putty</br>
+* Users can also clone the repository with a SSH client to their local machines. Mac users can for example use terminal and windows users putty.</br>
 
 **Git:** Git needs to be set up on the shell. [Further information here](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git "a Safari extension"). </br>
 **Java:** [A java version](https://java.com/en/download/ "java") 1.8 or newer is required. </br>
@@ -19,7 +19,7 @@ Example of user entrance: nonniBobo@82.221.50.244. When a user is signed into th
 
 ##These are the commands you need to start contributing to the program
 * in a SSH client: git clone https://github.com/sixgirlsandaguy/TicTacToe.git </br>
-you can either clone the project locally or to the Advania Cloud Service
+you can either clone the project locally or to the Advania Cloud Service.
 * if the user has been added to the organization he can start contributing to the program after the groups Protocol that is defined in the [design report](https://github.com/sixgirlsandaguy/TicTacToe/blob/master/Docs/DesignReport.md "design report").
 
 
