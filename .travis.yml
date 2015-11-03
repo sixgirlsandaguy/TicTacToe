@@ -1,8 +1,8 @@
 language: java
 jdk:
 - oraclejdk7
+sudo: false
 install:
- - wget -O- https://toolbelt.heroku.com/apt/release.key | apt-key add
  - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
  - heroku plugins:install https://github.com/ddollar/heroku-push
 script:
