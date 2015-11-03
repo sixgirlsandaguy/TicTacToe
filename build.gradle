@@ -18,12 +18,19 @@ mainClassName = "ru.sixgirlsandaguy.ticTacToe.ticTacToeWeb"
 jar {
 	manifest { attributes("Main-Class": "ru.sixgirlsandaguy.ticTacToe.ticTacToeWeb") }
 }
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use 'jcenter' for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
 }
+
+sourceSets {
+    selenium
+    seleniumXvfb
+}
+
  
 // In this section you declare the dependencies for your production and test code
 dependencies {
@@ -36,7 +43,34 @@ dependencies {
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
     compile 'com.sparkjava:spark-core:2.3'
+
+    seleniumCompile 'junit:junit:4.11'
+    seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.48.2'
+
+    seleniumXvfbCompile 'junit:junit:4.11'
+    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.48.2'
 }
+
+
+task seleniumXvfb(type: Test, dependsOn: installDist) {
+    testClassesDir = sourceSets.selenium.output.classesDir
+    classpath = sourceSets.selenium.runtimeClasspath
+
+    environment "DISPLAY", ":99"
+
+    doFirst {
+        'bin/xvfb start'.execute()
+        'build/install/TicTacToe/bin/TicTacToe &'.execute()
+    }
+
+    doLast {
+        'sh -e /etc/init.d/xvfb stop'.execute()
+    }
+}
+
+
+
+
 pmd {
 	ignoreFailures = true;
 	toolVersion = '5.1.3'
@@ -82,5 +116,5 @@ run {
 }
 
 task stage {
-	dependsOn installDist
+	dependsOn installApp
 }
