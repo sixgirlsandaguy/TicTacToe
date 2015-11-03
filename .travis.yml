@@ -1,15 +1,1 @@
 language: java
-jdk:
-- oraclejdk8
-install:
- - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
- - heroku plugins:install https://github.com/ddollar/heroku-push
-script:
-  - ./gradlew check
-  - heroku push --app sixgirlsandaguystaging
-
-deploy:
-  provider: heroku
-  api_key:
-    secure: CvcsPAum9Un5ruomXewjsO7JFeJ7O9rqImK0ierQyuZpuvnIFHCl+7w0LGTq9Iwgts5ABo6vElh0ZPOnQmLPLDj9OG/tC65AJ7Sxh7MLzgsy7fTyOxburMmWgjWr7qLMXRrfzoe6Jybv+5lYUVI5y72IqhenczAIx8hT3t223Hm6yoD3ZK3DplMZ/9b0ZUWMECWqLofqlR2kJM0Nsm6rLlQ+H/dT0++fUOk2gKMBX55z9YNcGLeG2Zlp2sd474T+tKoScWlFExQvAFf33Mxs4b2zHA0TSk9E2VfHndT5NgsvhZdNAfQj35JQOMZStGVVJ4rmsPQC7IiMP0tDOWI2zbDTPqblbqgnoaoemfF8zKkXdsm3XDBq0L6RtyVXzLAvKBjPyy1ks+aHlapAF2qb5Qu9KDO2m62NAQC7YOQmRsTHGACl9Cfvql4rxu/bA8SNAuoDKg/wMuZF4ehixJoy9DNRLON3aUNXy1Igf6/gEtPJGAPyc/4BS3FPZ1x0p58E/AoHVgck6uK32/TEQg/as1drEQ4MoMS+OxwLRtbJK5Hv7WweOsrNbbjG7IYbRT2A4J8llJeRQ/Wxwm4/U9f2m6LtsfFaTwgSRiAUTaRq3EReP6P3mfz6RhqL1WM2/Ov/P+hMkcdCcKWN832Wp8dWNW5A06fJXI1gJFxDe3vz+tg=
-  app: sixgirlsandaguy
