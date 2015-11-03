@@ -1,5 +1,7 @@
 language: java
-
+install:
+ - wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+ - heroku plugins:install https://github.com/ddollar/heroku-push
 script:
 - "./gradlew check"
 - heroku push --app sixgirlsandaguy
