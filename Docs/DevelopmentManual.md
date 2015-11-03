@@ -18,7 +18,7 @@ When a user is signed into the machine, he can clone the repository from Github.
 **Java:** [A java version](https://java.com/en/download/ "java") 1.8 or newer is required. </br>
 
 
-##These are the commands you need to build and run the program
+##These are the commands you need to start contributing to the program
 * in a SSH client: git clone https://github.com/sixgirlsandaguy/TicTacToe.git
 * if the user has been added to the organization he can start contributing to the program after the Protocol that is defined in the [design report](https://github.com/sixgirlsandaguy/TicTacToe/blob/master/Docs/DesignReport.md "design report").
 
