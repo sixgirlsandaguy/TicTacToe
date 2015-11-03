@@ -1,7 +1,7 @@
 # Design report
 ##Introduction
 
-The late-term assignment was to develop a simple TicTacToe program using the technical infrastructure to support agile development. (alveg eins og í verkefnalýsingu). The program is executable in console and online. Tictactoe is a game for two players in one computer. (eigum við að útskýra myllu). The group Sixgirlsandaguy developed the program. The group members are: Agnes Jóhannesdóttir, Elín Rós Hauksdóttir, Sigurlaug Guðrún Jóhannesdóttir, Vala Rún Valtýsdóttir, Huldar Bjarmi Halldórsson, Laufey Rut Guðmundsdóttir og Margrét Anna Kristjánsdóttir.
+The late-term assignment was to develop a simple TicTacToe program using the technical infrastructure to support agile development. The program is executable in console and online. Tictactoe is a game for two players in one computer. The group Sixgirlsandaguy developed the program. The group members are: Agnes Jóhannesdóttir, Elín Rós Hauksdóttir, Sigurlaug Guðrún Jóhannesdóttir, Vala Rún Valtýsdóttir, Huldar Bjarmi Halldórsson, Laufey Rut Guðmundsdóttir og Margrét Anna Kristjánsdóttir.
 
 ##Design
 The game Tictactoe was first implemented as a console application, then as a web application. The assignment was mostly implemented on the group's Ubuntu machine. Java was the programming language used to implement the game.
@@ -14,8 +14,6 @@ The game Tictactoe was first implemented as a console application, then as a web
 * Constants should be declared in all capital letters.
 * Official [Java programming style guidelines](http://www.oracle.com/technetwork/java/codeconvtoc-136057.html) should be followed.
 
-
-//Fólk forritar í sínu eigin umhverfi.
 
 ##Protocol
 * Pair programming should be practised for all code development.
