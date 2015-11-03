@@ -10,8 +10,7 @@ The user needs to have access to the following:
 
 **Shell:** The program runs on a Advania Cloud Service and local machines. 
 * In order to run the program on the Advania Cloud Service the user has to have access to and sign up with the username(@)the ip number of the machine. The ip number is 82.221.50.244.
-Example of user entrance: nonniBobo@82.221.50.244 <br />
-When a user is signed into the machine, he can clone the repository from Github. </br>
+Example of user entrance: nonniBobo@82.221.50.244. When a user is signed into the machine, he can clone the repository from Github. </br>
 * Users can also clone the repository to their local machines. Mac and Linux users can use built in shells, but Windows users need to install Powershell or Putty.</br>
 
 **Git:** Git needs to be set up on the shell. [Further information here](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git "a Safari extension"). </br>
