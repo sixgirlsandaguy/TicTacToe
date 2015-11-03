@@ -8,13 +8,19 @@ The user needs to have access to the following:
 
 **GitHub:** The program is stored in the source control system Github. The user will be added to the Organization of the program, SixGirlsAndAGuy. Then, he has an access to the program public repository, TicTacToe.
 
-**Shell:** The program runs on a virtual machine, a making of Advania Cloud Service.  <br /> Once a user has an access to the machine, he can sign up with the username(@)the ip number of the machine. The ip number is 82.221.50.244.
+**Shell:** The program runs on a Advania Cloud Service and local machines. 
+* In order to run the program on the Advania Cloud Service the user has to have access to and sign up with the username(@)the ip number of the machine. The ip number is 82.221.50.244.
 Example of user entrance: nonniBobo@82.221.50.244 <br />
 When a user is signed into the machine, he can clone the repository from Github. </br>
-Users can also clone the repository to their local machines. Mac and Linux users can use built in shells, but Windows users need to install Powershell or Putty.</br>
+* Users can also clone the repository to their local machines. Mac and Linux users can use built in shells, but Windows users need to install Powershell or Putty.</br>
 
 **Git:** Git needs to be set up on the shell. [Further information here](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git "a Safari extension"). </br>
 **Java:** [A java version](https://java.com/en/download/ "java") 1.8 or newer is required. </br>
 
 
 ##These are the commands you need to build and run the program
+* in a SSH client: git clone https://github.com/sixgirlsandaguy/TicTacToe.git
+* if the user has been added to the organization he can start contributing to the program after the Protocol that is defined in the design report.
+
+
+
