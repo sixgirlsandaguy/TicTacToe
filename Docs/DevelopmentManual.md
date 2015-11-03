@@ -15,7 +15,7 @@ When a user is signed into the machine, he can clone the repository from Github.
 Users can also clone the repository to their local machines. Mac and Linux users can use built in shells, but Windows users need to install Powershell or Putty.</br>
 
 **Git:** Git needs to be set up on the shell. [Further information here](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git "a Safari extension"). </br>
-**Java:** A java version 1.8 or newer is required. </br>
+**Java:** [A java version](https://java.com/en/download/ "java") 1.8 or newer is required. </br>
 
 
 ##These are the commands you need to build and run the program
